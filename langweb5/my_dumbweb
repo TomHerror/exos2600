@@ -2,6 +2,7 @@
 import argparse
 import os
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from sys import exit
 
 # parser 
@@ -32,7 +33,7 @@ def csv2object(csvname: str) -> [User]:
     users = []
     for line in f.readlines():
         spline = line.split(";")
-        users.append(User(spline[0], spline[1], spline[2], spline[3]))
+        users.append(User(spline[0].split('"')[1], spline[1].split('"')[1], spline[2].split('"')[1], spline[1].split('"')[1]))
     return users
 
 url = "http://localhost:5000"
@@ -40,6 +41,17 @@ if args.u:
     url = args.u
 
 users = csv2object(args.p)
-page = driver.get(url)
-print(page)
+for user in users:
+    driver.get(url + "/add_user")
+    name = driver.find_element(By.ID, "name")
+    name.send_keys(user.name)
+    ln = driver.find_element(By.ID, "lastname")
+    ln.send_keys(user.lastname)
+    login = driver.find_element(By.ID, "login")
+    login.send_keys(user.login)
+    desc = driver.find_element(By.ID, "desc")
+    desc.send_keys(user.desc)
+    name.submit()
+
+driver.close()
 
