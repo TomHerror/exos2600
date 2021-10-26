@@ -1,13 +1,45 @@
 #!/usr/bin/env python3
 import argparse
+import os
+from selenium import webdriver
+from sys import exit
 
+# parser 
 parser = argparse.ArgumentParser()
 parser.add_argument("-u", type=str, help="link to the site")
 parser.add_argument("-p", type=str, help="path to the file", required=True)
 
 args = parser.parse_args()
 
-if args.p:
-    print("p")
+# driver 
+driver = webdriver.Firefox()
+
+class User():
+    def __init__(self, name, lastname, login, desc):
+        self.name = name
+        self.lastname = lastname
+        self.login = login
+        self.desc = desc
+
+    def __str__(self):
+        return "name: "+ self.name + ", lastname: " + self.lastname + ", login: " + self.login  + ", desc: " + self.desc
+
+def csv2object(csvname: str) -> [User]:
+    if not os.path.isfile(csvname):
+        print("file does not exist")
+        exit(1)
+    f = open(csvname, "r")
+    users = []
+    for line in f.readlines():
+        spline = line.split(";")
+        users.append(User(spline[0], spline[1], spline[2], spline[3]))
+    return users
+
+url = "http://localhost:5000"
 if args.u:
-    print("u")
+    url = args.u
+
+users = csv2object(args.p)
+page = driver.get(url)
+print(page)
+
