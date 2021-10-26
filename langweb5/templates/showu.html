@@ -1,0 +1,10 @@
+{% extends "page.html" %}
+{% block content %}
+<ul>
+    <li>name: <b><div class="name">{{ name }}</div></b></li>
+    <li>lastname: <div class="lastname">{{ lastname }}</div></li>
+    <li>login: <div class="login">{{ login }}</div></li>
+    <li>desc: <div class="desc">{{ desc }}</div></li>
+</ul>
+<a href="/list_user">List</a>
+{% endblock %}

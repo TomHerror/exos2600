@@ -1,0 +1,12 @@
+{% extends "page.html" %}
+{% block content %}
+<form method="POST" action="/add_user">
+    {{ form.hidden_tag() }}
+    <div>{{ form.name.label }} {{ form.name(size=50) }}</div>
+    <div>{{ form.lastname.label }} {{ form.lastname(size=50) }}</div>
+    <div>{{ form.login.label }} {{ form.login(size=20) }}</div>
+    <div>{{ form.desc.label }} {{ form.desc(size=500) }}</div>
+    <input type="submit" value="Go">
+</form>
+<a href="/">Home</a>
+{% endblock %}

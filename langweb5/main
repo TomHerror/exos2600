@@ -1,0 +1,79 @@
+#!/usr/bin/env python3
+
+from flask import Flask, redirect
+from flask import render_template
+
+
+from flask_wtf import Form
+from wtforms import StringField, TextField
+from wtforms.validators import DataRequired, Length
+
+class MyForm(Form):
+    name = StringField('name', validators=[DataRequired(), Length(max=50)])
+    lastname = StringField('lastname', validators=[DataRequired(), Length(max=50)])
+    login = StringField('login', validators=[DataRequired(), Length(max=20)])
+    desc = TextField('desc', validators=[DataRequired(), Length(max=500)])
+
+from model import model
+from sqlalchemy import create_engine
+from sqlalchemy.orm import Session
+
+# instancie une app
+app = Flask(__name__)
+
+# in debug mode :P
+app.debug = True
+
+# secret key contre CSRF
+app.secret_key = 's3cr3t'
+
+@app.route('/success')
+def success():
+    links = ['add_user', 'list_user']
+    return render_template("success.html", links=links)
+
+@app.route('/add_user', methods=('GET', 'POST'))
+def add_user():
+    form = MyForm()
+    if form.validate_on_submit():
+        engine = create_engine('sqlite:///model/logins.db')
+        session = Session(engine)
+        # insert all data send into a dict
+        recv_data = {}
+        for d in vars(form):
+            if d != 'csrf_token' and hasattr(getattr(form, d), 'data'):
+                recv_data[d] = getattr(getattr(form, d), 'data')
+        acc = model.Account(**recv_data)
+        session.add_all([acc])
+        session.commit()
+        return redirect('/success')
+    return render_template("form.html", form=form)
+
+@app.route('/list_user')
+def list_user():
+    engine = create_engine('sqlite:///model/logins.db')
+    session = Session(engine)
+    lblock = []
+    for a in session.query(model.Account):
+        print(vars(a))
+        lblock.append((a.id, a.login))
+    return render_template("listu.html", lblock=lblock)
+
+@app.route('/show_user/<int:user_id>')
+def show_user(user_id):
+    engine = create_engine('sqlite:///model/logins.db')
+    session = Session(engine)
+    users = session.query(model.Account).filter_by(id=user_id).all()
+    if len(users) > 1:
+        print("ERROROROROROROR")
+        return redirect('/')
+    return render_template("showu.html", **vars(users[0]))
+
+@app.route("/")
+def main():
+    links = ['add_user', 'list_user']
+    return render_template("navigation.html", links=links)
+
+if __name__ == "__main__":
+    # forever serve
+    app.run(port=5000)

@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-u", type=str, help="link to the site")
+parser.add_argument("-p", type=str, help="path to the file", required=True)
+
+args = parser.parse_args()
+
+if args.p:
+    print("p")
+if args.u:
+    print("u")
