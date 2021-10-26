@@ -15,6 +15,7 @@ args = parser.parse_args()
 # driver 
 driver = webdriver.Firefox()
 
+# user class
 class User():
     def __init__(self, name, lastname, login, desc):
         self.name = name
@@ -25,6 +26,7 @@ class User():
     def __str__(self):
         return "name: "+ self.name + ", lastname: " + self.lastname + ", login: " + self.login  + ", desc: " + self.desc
 
+# get all users in the csv file and chack if the file exist in first
 def csv2object(csvname: str) -> [User]:
     if not os.path.isfile(csvname):
         print("file does not exist")
@@ -36,11 +38,16 @@ def csv2object(csvname: str) -> [User]:
         users.append(User(spline[0].split('"')[1], spline[1].split('"')[1], spline[2].split('"')[1], spline[1].split('"')[1]))
     return users
 
+# default url
 url = "http://localhost:5000"
+
+# change url if there is the -u option
 if args.u:
     url = args.u
 
 users = csv2object(args.p)
+
+# complete the form et submit for all users
 for user in users:
     driver.get(url + "/add_user")
     name = driver.find_element(By.ID, "name")
@@ -53,5 +60,6 @@ for user in users:
     desc.send_keys(user.desc)
     name.submit()
 
+# close the browser
 driver.close()
 
