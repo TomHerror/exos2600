@@ -1,0 +1,83 @@
+1635258432120	geckodriver	INFO	Listening on 127.0.0.1:55105
+1635258432124	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "52437" "-no-remote" "-profile" "/tmp/rust_mozprofilelOZ12r"
+1635258433930	Marionette	INFO	Listening on port 43231
+1635258434032	Marionette	WARN	TLS certificate errors will be ignored for this session
+1635258446934	Marionette	INFO	Stopped listening on port 43231
+1635258786344	geckodriver	INFO	Listening on 127.0.0.1:60475
+1635258786348	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "39143" "-no-remote" "-profile" "/tmp/rust_mozprofiledzVhWl"
+1635258788250	Marionette	INFO	Listening on port 39119
+1635258788264	Marionette	WARN	TLS certificate errors will be ignored for this session
+1635258803273	Marionette	INFO	Stopped listening on port 39119
+1635258803774	geckodriver	INFO	Listening on 127.0.0.1:37889
+1635258803778	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "34917" "-no-remote" "-profile" "/tmp/rust_mozprofileJyl296"
+1635258805564	Marionette	INFO	Listening on port 38621
+1635258805615	Marionette	WARN	TLS certificate errors will be ignored for this session
+1635258816836	Marionette	INFO	Stopped listening on port 38621
+1635258839495	geckodriver	INFO	Listening on 127.0.0.1:40393
+1635258839499	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "39327" "-no-remote" "-profile" "/tmp/rust_mozprofilecgTDQG"
+1635258841311	Marionette	INFO	Listening on port 40467
+1635258841421	Marionette	WARN	TLS certificate errors will be ignored for this session
+1635258877553	geckodriver	INFO	Listening on 127.0.0.1:52479
+1635258877558	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "33483" "-no-remote" "-profile" "/tmp/rust_mozprofilen7t6Jt"
+1635258879523	Marionette	INFO	Listening on port 38905
+1635258879578	Marionette	WARN	TLS certificate errors will be ignored for this session
+1635258964318	Marionette	INFO	Stopped listening on port 38905
+1635259068803	Marionette	INFO	Stopped listening on port 40467
+1635259152477	geckodriver	INFO	Listening on 127.0.0.1:38519
+1635259152480	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "52441" "-no-remote" "-profile" "/tmp/rust_mozprofilebb1DxZ"
+1635259154230	Marionette	INFO	Listening on port 36773
+1635259154301	Marionette	WARN	TLS certificate errors will be ignored for this session
+1635259164389	Marionette	INFO	Stopped listening on port 36773
+1635259196856	geckodriver	INFO	Listening on 127.0.0.1:41827
+1635259196859	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "35955" "-no-remote" "-profile" "/tmp/rust_mozprofilegSjoPe"
+1635259198484	Marionette	INFO	Listening on port 35827
+1635259198580	Marionette	WARN	TLS certificate errors will be ignored for this session
+1635259202111	Marionette	INFO	Stopped listening on port 35827
+1635259292263	geckodriver	INFO	Listening on 127.0.0.1:42949
+1635259292266	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "43441" "-no-remote" "-profile" "/tmp/rust_mozprofileHOOcxi"
+1635259294255	Marionette	INFO	Listening on port 43735
+1635259294295	Marionette	WARN	TLS certificate errors will be ignored for this session
+1635259306740	Marionette	INFO	Stopped listening on port 43735
+1635259339695	geckodriver	INFO	Listening on 127.0.0.1:36081
+1635259339699	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "59221" "-no-remote" "-profile" "/tmp/rust_mozprofile7sRCFc"
+1635259341458	Marionette	INFO	Listening on port 44335
+1635259341510	Marionette	WARN	TLS certificate errors will be ignored for this session
+1635259359124	Marionette	INFO	Stopped listening on port 44335
+1635259407185	geckodriver	INFO	Listening on 127.0.0.1:35077
+1635259407189	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "39061" "-no-remote" "-profile" "/tmp/rust_mozprofileFulH2D"
+1635259408922	Marionette	INFO	Listening on port 36863
+1635259409019	Marionette	WARN	TLS certificate errors will be ignored for this session
+1635259423569	Marionette	INFO	Stopped listening on port 36863
+1635259446135	geckodriver	INFO	Listening on 127.0.0.1:42173
+1635259446139	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "47115" "-no-remote" "-profile" "/tmp/rust_mozprofileIjUBOi"
+1635259447799	Marionette	INFO	Listening on port 36869
+1635259447868	Marionette	WARN	TLS certificate errors will be ignored for this session
+1635259462090	Marionette	INFO	Stopped listening on port 36869
+1635259483915	geckodriver	INFO	Listening on 127.0.0.1:57017
+1635259483919	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "60231" "-no-remote" "-profile" "/tmp/rust_mozprofile6L4Sis"
+1635259485862	Marionette	INFO	Listening on port 46079
+1635259485935	Marionette	WARN	TLS certificate errors will be ignored for this session
+1635259488968	Marionette	INFO	Stopped listening on port 46079
+1635259539812	geckodriver	INFO	Listening on 127.0.0.1:34905
+1635259539816	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "59541" "-no-remote" "-profile" "/tmp/rust_mozprofilee2tq7F"
+1635259541489	Marionette	INFO	Listening on port 38179
+1635259541528	Marionette	WARN	TLS certificate errors will be ignored for this session
+1635259542061	Marionette	INFO	Stopped listening on port 38179
+1635259729592	geckodriver	INFO	Listening on 127.0.0.1:47413
+1635259729595	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "47095" "-no-remote" "-profile" "/tmp/rust_mozprofile44urev"
+1635259731292	Marionette	INFO	Listening on port 42825
+1635259731309	Marionette	WARN	TLS certificate errors will be ignored for this session
+1635259731765	Marionette	INFO	Stopped listening on port 42825
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0xB000E,name=PBackgroundIDBDatabase::Msg_CloseAfterInvalidationComplete) Channel error: cannot send/recv
+
+1635259776001	geckodriver	INFO	Listening on 127.0.0.1:42907
+1635259776004	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "45109" "-no-remote" "-profile" "/tmp/rust_mozprofileiUMqKB"
+1635259777675	Marionette	INFO	Listening on port 35427
+1635259777712	Marionette	WARN	TLS certificate errors will be ignored for this session
+1635259806037	Marionette	INFO	Stopped listening on port 35427
+1635259806753	geckodriver	INFO	Listening on 127.0.0.1:56571
+1635259806758	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "57049" "-no-remote" "-profile" "/tmp/rust_mozprofile0RS1Xf"
+1635259808501	Marionette	INFO	Listening on port 44755
+1635259808565	Marionette	WARN	TLS certificate errors will be ignored for this session
+1635259809050	Marionette	INFO	Stopped listening on port 44755
